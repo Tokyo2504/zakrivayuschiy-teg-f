@@ -4,3 +4,107 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+	--bg-color: #fff;
+	--accent-color: #000;
+	--label-color: #fff;
+	--hover-color: #fff;
+	--button-text-color: #fff;
+	--svg-contour-color: var(--accent-color);
+	--svg-body-color: #ff0000;
+	--bg-image: repeating-linear-gradient(to right,
+			#d3d3d3,
+			#d3d3d3 2px,
+			transparent 2px,
+			transparent 4px), repeating-linear-gradient(to bottom,
+			#d3d3d3,
+			#d3d3d3 2px,
+			transparent 2px,
+			transparent 4px),
+		linear-gradient(to bottom,
+			#e7e7e7 0%,
+			#e7e7e7 0.01%,
+			#1a1a1a 100%);
+}
+
+:root.theme-dark {
+	--bg-color: #000;
+	--accent-color: #00cc14;
+	--hover-color: #00cc14;
+	--text-font-weight: 465;
+	--title-font-weight: 785;
+	--label-color: #000;
+	--button-text-color: var(--accent-color);
+	--svg-contour-color: var(--accent-color);
+	--svg-body-color: #ff0000;
+	--bg-image:
+		repeating-linear-gradient(to right,
+			#000,
+			#000 2px,
+			transparent 2px,
+			transparent 4px),
+		repeating-linear-gradient(to bottom,
+			#000,
+			#000 2px,
+			transparent 2px,
+			transparent 4px),
+		linear-gradient(to bottom,
+			#007f0c 0%,
+			#007f0c 0.01%,
+			#004306 100%);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: #fff;
+		--accent-color: #000;
+		--label-color: #fff;
+		--hover-color: #fff;
+		--button-text-color: #fff;
+		--svg-contour-color: var(--accent-color);
+		--svg-body-color: #ff0000;
+		--bg-image:
+			repeating-linear-gradient(to right,
+				#d3d3d3,
+				#d3d3d3 2px,
+				transparent 2px,
+				transparent 4px),
+			repeating-linear-gradient(to bottom,
+				#d3d3d3,
+				#d3d3d3 2px,
+				transparent 2px,
+				transparent 4px),
+			linear-gradient(to bottom,
+				#e7e7e7 0%,
+				#e7e7e7 0.01%,
+				#1a1a1a 100%);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: #000;
+		--accent-color: #00cc14;
+		--label-color: #000;
+		--hover-color: #00cc14;
+		--button-text-color: var(--accent-color);
+		--svg-contour-color: var(--accent-color);
+		--svg-body-color: #ff0000;
+		--bg-image:
+			repeating-linear-gradient(to right,
+				#000,
+				#000 2px,
+				transparent 2px,
+				transparent 4px),
+			repeating-linear-gradient(to bottom,
+				#000,
+				#000 2px,
+				transparent 2px,
+				transparent 4px),
+			linear-gradient(to bottom,
+				#007f0c 0%,
+				#007f0c 0.01%,
+				#004306 100%);
+	}
+}
